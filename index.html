@@ -1,184 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sudheer Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudheer Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --card: #ffffff;
-  --border: #e2e8f0;
-  --primary: #2563eb;
-  --accent: #0ea5e9;
-  --text: #1e293b;
-  --muted: #64748b;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-  font-family:'Poppins',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-
-nav {
-  display:flex;
-  justify-content:space-between;
-  padding:1rem 3rem;
-  background:white;
-  border-bottom:1px solid var(--border);
-  position:sticky;
-  top:0;
-}
-
-nav h2 { color:var(--primary); }
-
-nav a {
-  margin-left:20px;
-  text-decoration:none;
-  color:var(--muted);
-  font-weight:500;
-}
-
-nav a:hover { color:var(--primary); }
-
-.hero {
-  text-align:center;
-  padding:100px 20px;
-}
-
-.hero h1 {
-  font-size:2.8rem;
-  color:var(--primary);
-}
-
-.hero p {
-  color:var(--muted);
-  margin:10px 0 20px;
-}
-
-.btn {
-  padding:10px 20px;
-  background:var(--primary);
-  color:white;
-  border-radius:6px;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.btn:hover {
-  background:#1d4ed8;
-  transform:translateY(-2px);
-}
-
-section { padding:60px 10%; }
-
-h2 { margin-bottom:20px; }
-
-.card {
-  background:var(--card);
-  padding:20px;
-  border-radius:10px;
-  border:1px solid var(--border);
-  margin-top:15px;
-  transition:0.3s;
-}
-
-.card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-footer {
-  text-align:center;
-  padding:20px;
-  color:var(--muted);
-}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-  <h2>PS</h2>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav>
+    <h2>PS</h2>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<section class="hero">
-  <h1>Pallepati Sudheer</h1>
-  <p>AI & ML Student | Building Intelligent Systems</p>
-  <a href="mailto:pallepatisudheer@gmail.com" class="btn">Get in Touch</a>
-</section>
+  <!-- HERO -->
+  <section id="hero">
+    <h1>Pallepati Sudheer</h1>
+    <p>Computer Science (AI & ML) student building intelligent systems.</p>
+    <a href="mailto:pallepatisudheer@gmail.com">Get in Touch</a>
+  </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>B.Tech AI & ML student passionate about data, ML, and full-stack development.</p>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+I'm a <strong>B.Tech student specialising in AI & Machine Learning</strong> at Narasaraopeta Engineering College, driven by curiosity and a passion for real-world problem-solving using data.
+</p>
+<p>My background spans <strong>predictive modelling, data preprocessing,</strong> and <strong>full-stack development</strong>. I've gained hands-on experience through internships at Infosys and Schneider Electric, working across machine learning and quality assurance.
+</p>
+    <p>
+            I'm a quick learner who thrives in collaborative environments and enjoys building projects that bridge theory and impact.
+          </p>
+
+    
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, Java</li>
+      <li>HTML, CSS</li>
+      <li>Machine Learning, Deep Learning</li>
+      <li>Jupyter Notebook, VS Code</li>
+    </ul>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <p>B.Tech – AI & ML (CGPA: 7.8)</p>
+    <p>Diploma – ECE (74%)</p>
+    <p>SSC – ZP High School (548 Marks)</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Crime Analysis & Prediction using ML & Deep Learning</h3>
+    <p>
+
+            Developed a full-stack application to analyse historical crime datasets and predict future crime patterns. Applied advanced data preprocessing, feature engineering, and deep learning techniques to identify hotspot locations with actionable insights for decision-makers.
+</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <h3>Data Science Intern – Infosys</h3>
+    <ul>
+      <li>Learned and applied data preprocessing techniques on real datasets.</li>
+              <li>Studied machine learning fundamentals and model training pipelines.</li>
+              <li>Worked on building basic predictive models with structured data.</li>
+
+    </ul>
+
+    <h3>Testing Engineer Intern – Schneider Electric</h3>
+    <ul>
+<li>Assisted in testing electrical components for quality assurance.</li>
+              <li>Gained exposure to quality assurance processes and documentation.</li>
+              <li>Collaborated with engineering teams in a professional environment.</li>
+
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
     <p>Email: pallepatisudheer@gmail.com</p>
     <p>Phone: +91 7207625999</p>
-  </div>
-</section>
+    <p>Location: Ongole, Andhra Pradesh</p>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">Python, Java</div>
-    <div class="card">HTML, CSS</div>
-    <div class="card">Machine Learning, Deep Learning</div>
-    <div class="card">VS Code, Jupyter</div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="card">
-    <h3>Crime Prediction System</h3>
-    <p>ML-based system to analyze and predict crime patterns.</p>
-  </div>
-</section>
-
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="card">
-    <h3>Infosys – Data Science Intern</h3>
-    <p>Worked on ML models and preprocessing.</p>
-  </div>
-  <div class="card">
-    <h3>Schneider Electric – Testing Intern</h3>
-    <p>Worked on QA and testing.</p>
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-  <div class="card">
-    <p>B.Tech AI & ML – CGPA 7.8</p>
-    <p>Diploma ECE – 74%</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Sudheer Portfolio</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>Pallepati Sudheer · AI & ML Engineer</p>
+  </footer>
 
 </body>
 </html>
