@@ -1,112 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudheer Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pallepati Sudheer – AI & ML Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+  <style>
+:root {
+  --bg: #0b0f19;
+  --surface: #111827;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+
+  --primary: #6366f1;
+  --accent: #22d3ee;
+
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+
+  --gradient: linear-gradient(135deg, #6366f1, #22d3ee);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height:1.7;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top:0; left:0; right:0;
+  display:flex;
+  justify-content:space-between;
+  padding:1.2rem 4rem;
+  background: rgba(11,15,25,0.7);
+  backdrop-filter: blur(14px);
+  border-bottom:1px solid var(--border);
+  z-index:100;
+}
+
+.nav-logo { font-weight:700; font-size:1.2rem; color: var(--primary); }
+
+.nav-links { display:flex; gap:2rem; list-style:none; }
+
+.nav-links a {
+  text-decoration:none;
+  color:var(--muted);
+  font-size:0.85rem;
+  transition:0.3s;
+}
+.nav-links a:hover { color:var(--primary); }
+
+/* HERO */
+#hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:6rem 4rem;
+}
+.hero-inner { max-width:1000px; margin:auto; }
+
+.hero-tag {
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:50px;
+  background: rgba(99,102,241,0.1);
+  color: var(--primary);
+  font-size:0.75rem;
+  margin-bottom:1.5rem;
+  animation:fadeUp 0.8s ease;
+}
+
+h1 {
+  font-size: clamp(2.5rem,6vw,5rem);
+  font-weight:800;
+  margin-bottom:1rem;
+  animation:fadeUp 1s ease;
+}
+
+h1 span {
+  background: var(--gradient);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero-sub {
+  color:var(--muted);
+  margin-bottom:2rem;
+  max-width:500px;
+  animation:fadeUp 1.2s ease;
+}
+
+.hero-actions { display:flex; gap:1rem; }
+
+.btn {
+  padding:10px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:0.9rem;
+  transition:0.3s;
+}
+.btn-primary {
+  background: var(--gradient);
+  color:white;
+}
+.btn-primary:hover {
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(99,102,241,0.4);
+}
+.btn-outline {
+  border:1px solid var(--border);
+  color:var(--text);
+}
+.btn-outline:hover {
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+/* SECTIONS */
+section { padding:6rem 4rem; }
+.section-inner { max-width:1100px; margin:auto; }
+
+h2 { font-size:2.2rem; margin-bottom:1.5rem; }
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border:1px solid var(--border);
+  padding:1.5rem;
+  border-radius:12px;
+  margin-top:1rem;
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s;
+}
+.reveal.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:2rem;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+}
+
+/* MOBILE */
+@media (max-width:900px){
+  nav { padding:1rem; }
+  section { padding:4rem 1.5rem; }
+}
+  </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h2>PS</h2>
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">PS</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Available for Opportunities</div>
+    <h1>Pallepati<br><span>Sudheer</span></h1>
+    <p class="hero-sub">AI & ML student building intelligent systems.</p>
+    <div class="hero-actions">
+      <a href="mailto:pallepatisudheer@gmail.com" class="btn btn-primary">Get in Touch</a>
+      <a href="#projects" class="btn btn-outline">View Projects</a>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section id="hero">
-    <h1>Pallepati Sudheer</h1>
-    <p>Computer Science (AI & ML) student building intelligent systems.</p>
-    <a href="mailto:pallepatisudheer@gmail.com">Get in Touch</a>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
     <h2>About Me</h2>
-    <p>
-I'm a <strong>B.Tech student specialising in AI & Machine Learning</strong> at Narasaraopeta Engineering College, driven by curiosity and a passion for real-world problem-solving using data.
-</p>
-<p>My background spans <strong>predictive modelling, data preprocessing,</strong> and <strong>full-stack development</strong>. I've gained hands-on experience through internships at Infosys and Schneider Electric, working across machine learning and quality assurance.
-</p>
-    <p>
-            I'm a quick learner who thrives in collaborative environments and enjoys building projects that bridge theory and impact.
-          </p>
+    <div class="card reveal">
+      <p>B.Tech student specializing in AI & ML at Narasaraopeta Engineering College.</p>
+      <p>Skilled in machine learning, data preprocessing, and full-stack development.</p>
+    </div>
+  </div>
+</section>
 
-    
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
     <h2>Skills</h2>
-    <ul>
-      <li>Python, Java</li>
-      <li>HTML, CSS</li>
-      <li>Machine Learning, Deep Learning</li>
-      <li>Jupyter Notebook, VS Code</li>
-    </ul>
-  </section>
+    <div class="card reveal">Python, Java, HTML, CSS</div>
+    <div class="card reveal">Machine Learning, Deep Learning</div>
+  </div>
+</section>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <h2>Education</h2>
-    <p>B.Tech – AI & ML (CGPA: 7.8)</p>
-    <p>Diploma – ECE (74%)</p>
-    <p>SSC – ZP High School (548 Marks)</p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
     <h2>Projects</h2>
-    <h3>Crime Analysis & Prediction using ML & Deep Learning</h3>
-    <p>
+    <div class="card reveal">
+      Crime Analysis & Prediction using ML & DL
+    </div>
+  </div>
+</section>
 
-            Developed a full-stack application to analyse historical crime datasets and predict future crime patterns. Applied advanced data preprocessing, feature engineering, and deep learning techniques to identify hotspot locations with actionable insights for decision-makers.
-</p>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
     <h2>Experience</h2>
+    <div class="card reveal">Data Science Intern – Infosys</div>
+    <div class="card reveal">Testing Engineer Intern – Schneider Electric</div>
+  </div>
+</section>
 
-    <h3>Data Science Intern – Infosys</h3>
-    <ul>
-      <li>Learned and applied data preprocessing techniques on real datasets.</li>
-              <li>Studied machine learning fundamentals and model training pipelines.</li>
-              <li>Worked on building basic predictive models with structured data.</li>
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <h2>Education</h2>
+    <div class="card reveal">B.Tech AI & ML (CGPA: 7.8)</div>
+    <div class="card reveal">Diploma ECE (74%)</div>
+  </div>
+</section>
 
-    </ul>
+<!-- FOOTER -->
+<footer>
+  <p>Pallepati Sudheer · AI & ML Engineer</p>
+</footer>
 
-    <h3>Testing Engineer Intern – Schneider Electric</h3>
-    <ul>
-<li>Assisted in testing electrical components for quality assurance.</li>
-              <li>Gained exposure to quality assurance processes and documentation.</li>
-              <li>Collaborated with engineering teams in a professional environment.</li>
-
-    </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: pallepatisudheer@gmail.com</p>
-    <p>Phone: +91 7207625999</p>
-    <p>Location: Ongole, Andhra Pradesh</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Pallepati Sudheer · AI & ML Engineer</p>
-  </footer>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add("visible");
+    }
+  });
+});
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
